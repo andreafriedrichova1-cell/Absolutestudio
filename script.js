@@ -148,9 +148,14 @@ function animateCounter(el, target, suffix, duration = 1500) {
 // ===== KRYO DEVICE IMAGE PARALLAX (subtle) =====
 window.addEventListener('scroll', () => {
   const heroImg = document.querySelector('.page.active .hero-img');
+  const heroCircle = document.querySelector('.page.active .hero-circle-overlay');
   if (heroImg) {
     const scrolled = window.scrollY;
-    heroImg.style.transform = `translateY(${scrolled * 0.3}px)`;
+    const transformVal = `translateY(${scrolled * 0.3}px)`;
+    heroImg.style.transform = transformVal;
+    if (heroCircle) {
+      heroCircle.style.transform = transformVal;
+    }
   }
 });
 
