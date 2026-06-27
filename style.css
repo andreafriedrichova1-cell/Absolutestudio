@@ -256,6 +256,7 @@ input, textarea, select { font-family: inherit; }
   min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 .hero-bg {
@@ -282,6 +283,11 @@ input, textarea, select { font-family: inherit; }
   z-index: 2;
   color: white;
   padding: 3rem 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 .hero-tag {
   display: inline-block;
@@ -327,8 +333,10 @@ input, textarea, select { font-family: inherit; }
   max-width: 520px;
   margin-bottom: 2.5rem;
   line-height: 1.7;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 .hero-scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -1162,7 +1170,7 @@ input, textarea, select { font-family: inherit; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .image-badge { display: none; }
-  .hero-ctas { flex-direction: column; }
+  .hero-ctas { flex-direction: column; align-items: center; }
 }
 
 @media (max-width: 480px) {
